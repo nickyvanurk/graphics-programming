@@ -1,0 +1,24 @@
+[
+    {
+        "arguments": [
+            "g++",
+            "-c",
+            "-o",
+            "main",
+            "glad.c"
+        ],
+        "directory": "/home/nicky/graphics/triangle",
+        "file": "glad.c"
+    },
+    {
+        "arguments": [
+            "g++",
+            "-c",
+            "-o",
+            "main",
+            "main.cpp"
+        ],
+        "directory": "/home/nicky/graphics/triangle",
+        "file": "main.cpp"
+    }
+]
