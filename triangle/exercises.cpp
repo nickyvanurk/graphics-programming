@@ -74,8 +74,19 @@ int main() {
     glDeleteShader(fragmentShader);
 
     float vertices[] = {
+        // Left triangle
         -0.5f, -0.5f, 0.0f,
+        -0.0f, -0.5f, 0.0f,
+        -0.25f, 0.0f, 0.0f,
+
+        // Right triangle
+         0.0f, -0.5f, 0.0f,
          0.5f, -0.5f, 0.0f,
+         0.25f, 0.0f, 0.0f,
+
+         // Top triangle
+        -0.25f, 0.0f, 0.0f,
+         0.25f, 0.0f, 0.0f,
          0.0f,  0.5f, 0.0f,
     };
 
@@ -101,7 +112,7 @@ int main() {
 
         glUseProgram(shaderProgram);
         glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glDrawArrays(GL_TRIANGLES, 0, 9);
 
         glfwPollEvents();
         glfwSwapBuffers(window);
