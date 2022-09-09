@@ -57,6 +57,12 @@ int main() {
     while (!glfwWindowShouldClose(window)) {
         processInput(window);
 
+        float timeValue = glfwGetTime();
+        float offsetX = sin(timeValue) / 3.0f;
+        float offsetY = cos(timeValue) / 3.0f;
+        ourShader.setFloat("offsetX", offsetX);
+        ourShader.setFloat("offsetY", offsetY);
+
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
